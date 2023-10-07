@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding Local</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #03A65A;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            height: 100px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #03A65A;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Estilos para a div do slideshow */
+        .slideshow {
+            margin-top: 30px;
+            max-width: 1000px;
+            max-height: 500px;
+            overflow: hidden;
+        }
+
+        .slideshow img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        footer {
+            background-color: #03A65A;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Crowdfunding Local</h1>
+        <p>Uma plataforma para apoiar projetos locais na sua comunidade.</p>
+    </header>
+
+    <div class="container">
+        <h2>Sobre Nós</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut finibus odio, eu consequat velit.</p>
+
+        <h2>Como Funciona</h2>
+        <ol>
+            <li>Explore os projetos locais.</li>
+            <li>Apoie projetos que você acredita.</li>
+            <li>Veja o impacto na sua comunidade.</li>
+        </ol>
+
+        <a href="app.html" class="cta-button">Apoie Agora</a>
+        <!-- Slideshow -->
+    <div class="slideshow">
+        <img src="img/imagem1.jpg" alt="Imagem 1">
+        <img src="img/imagem2.jpg" alt="Imagem 2">
+        <img src="img/imagem3.jpg" alt="Imagem 3">
+    </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Crowdfunding Local. Todos os direitos reservados.</p>
+    </footer>
+</body>
+    <script>
+        // Obtém todas as imagens dentro da div de slideshow
+        var imagens = document.querySelectorAll('.slideshow img');
+        var index = 0;
+
+        function mostrarProximaImagem() {
+            // Esconde a imagem atual
+            imagens[index].style.display = 'none';
+
+            // Avança para a próxima imagem
+            index = (index + 1) % imagens.length;
+
+            // Mostra a próxima imagem
+            imagens[index].style.display = 'block';
+        }
+
+        // Inicializa o slideshow
+        imagens[0].style.display = 'block';
+
+        // Configura um temporizador para alternar automaticamente as imagens
+        setInterval(mostrarProximaImagem, 3000); // Altere o valor (em milissegundos) para ajustar a velocidade
+    </script>
+</html>

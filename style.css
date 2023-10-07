@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --cor1: #1B51F2;
+    --cor2: #1237A6;
+    --cor3: #03A65A;
+    --cor4: #F28705;
+    --cor5: #D92B2B;
+}
+
+header {
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0; /* Posiciona o cabeçalho no topo da página */
+    left: 0; /* Posiciona o cabeçalho no lado esquerdo */
+    width: 100%; /* Define a largura para ocupar toda a largura da tela */
+    height: 10%;
+    background-color: #ffffff;
+    z-index: 1000; /* Garante que o cabeçalho esteja na parte superior da pilha de elementos */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: var(--cor3);
+}
+
+.elementoHeader {
+    height: 70px;
+}
+
+#pfp {
+    position: absolute;
+    top: 20px; /* Ajuste a distância do topo conforme necessário */
+    right: 15px; /* Ajuste a distância da direita conforme necessário */
+    height: 50px;
+}
+
+#logo {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+/* Estilos para o elemento main */
+main {
+    /* Adicione outros estilos conforme necessário */
+    position: relative; /* Garante que o elemento pai tenha posição relativa */
+}
+
+/* Estilos para o elemento iframe dentro do main */
+.map-iframe {
+    width: 100%;
+    height: 100vh;
+}
+
+footer {
+    background-color: var(--cor3);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
